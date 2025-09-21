@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI).then(() => 
+mongoose.connect('MONGO_URI=mongodb+srv://gowrig562005:abcd1234@cluster0.fk6fwxc.mongodb.net/todo').then(() => 
     console.log('mongodb connected')
 ).catch(err => 
     console.log(err));
@@ -36,3 +36,4 @@ app.listen(5000,()=>{
 console.log('server started on port 5000')
 
 });
+
